@@ -1,10 +1,4 @@
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from failing the test
-  return false
-})
-    
-    
-    // Sticky Navbar
+ // Sticky Navbar
     let header = document.querySelector('header');
     let menu = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
@@ -34,6 +28,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
             document.body.classList.add('active');
         }
     }
+
+
+    
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from failing the test
+    return false
+  })
 
 
 
