@@ -101,10 +101,10 @@ nav.shadow {
   align-items: center;
   gap: 1rem;
 }
-.home-img {
+.home-image {
   order: 3;
 }
-.home-img img {
+.home-image img {
   width: 80%;
   border-radius: 50%;
 }
@@ -209,7 +209,7 @@ nav.shadow {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2rem;
   margin-top: 4rem;
@@ -220,7 +220,7 @@ nav.shadow {
   object-position: center;
 }
 
-.bars-box {
+.skills-card {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -230,10 +230,10 @@ nav.shadow {
   margin: auto;
 }
 
-.bars-box img{
+.skills-card img{
   width: 150px;
 }
-/* .bars-box h3,
+/* .skills-card h3,
 span {
   font-size: 1.1rem;
   font-weight: 500;
@@ -287,6 +287,45 @@ span {
 }
 .services-box:hover{
  background-color: #02225a;
+}
+
+.calendar{
+  width: 80%;
+  color: white;
+}
+
+#github1{
+  width: 55%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#github1>img{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#github2{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#github2>img{
+  /* width: 500px; */ 
+  border-radius: 5px;
+  height: 160px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#github2>img:nth-child(2){
+  margin-left: 8px;
 }
 
 .services-box h3 {
@@ -466,7 +505,7 @@ form textarea {
     grid-column: 1/3;
     padding-left: 1.4rem;
   }
-  .home-img {
+  .home-image {
     order: initial;
   }
   .about-container {
@@ -518,4 +557,67 @@ form textarea {
   .contact-button{
     margin-left: 25%;
   }
+}
+
+
+
+/*------------------------------PROJECTS------------------------------ */
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 10px;
+}
+
+.project-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #d56363;
+}
+
+.links a:hover{
+  font-weight: bold;
+}
+
+.links i {
+  margin-right: 5px;
+}
+
+.project-card img {
+  width: 300px;
+  height: auto;
+  order: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card img:hover {
+  transform: scale(1.5);
 }
