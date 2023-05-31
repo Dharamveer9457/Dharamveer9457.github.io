@@ -40,6 +40,7 @@ body {
 }
 .heading h2 {
   font-size: 30px;
+  text-decoration: underline;
 }
  
 .heading span {
@@ -564,16 +565,21 @@ form textarea {
 /*------------------------------PROJECTS------------------------------ */
 
 .portfolio {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
 
 .project-card {
-  margin: 20px;
+  margin: auto;
   max-width: 300px;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 0px 10px 0px;
 }
 
 .project-card img {
@@ -582,7 +588,7 @@ form textarea {
 }
 
 .project-details {
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .project-details h2 {
@@ -604,6 +610,7 @@ form textarea {
 
 .links a:hover{
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .links i {
@@ -616,8 +623,26 @@ form textarea {
   order: 2;
   transition: transform 0.3s ease;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .project-card img:hover {
   transform: scale(1.5);
+}
+
+.project-tech-stack{
+display: flex;
+width: 90%;
+margin: auto;
+justify-content: center;
+align-items: center;
+padding: 5px;
+}
+
+.project-tech-stack img{
+  width: 40px;
+}
+
+.project-tech-stack>img:nth-child(1), .project-tech-stack img:nth-child(2){
+  width: 35px;
 }
