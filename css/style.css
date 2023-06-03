@@ -74,6 +74,7 @@ nav.shadow {
 .navbar {
   display: flex;
 }
+
 .navbar a {
   font-size: 1rem;
   padding: 10px 20px;
@@ -83,12 +84,14 @@ nav.shadow {
 .navbar a:hover {
   color: var(--hover);
 }
-#menu-icon {
+/* #menu-icon {
   font-size: 24px;
   cursor: pointer;
   z-index: 10001;
   display: none;
-}
+  border: 1px solid yellow;
+} */
+
 #lightmode {
   font-size: 22px;
   cursor: pointer;
@@ -212,6 +215,10 @@ nav.shadow {
   font-weight: bold;
 }
 
+#resume-btn1{
+  position: relative;
+  top: 1.5px;
+}
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
