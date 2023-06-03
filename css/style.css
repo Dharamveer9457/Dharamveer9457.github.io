@@ -31,10 +31,10 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
-/* *::selection {
+*::selection {
   color: var(--bg-color);
   background: var(--main-color);
-} */
+}
 .heading {
   text-align: center;
 }
