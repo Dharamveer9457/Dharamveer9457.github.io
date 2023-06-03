@@ -440,10 +440,10 @@ form textarea {
   padding: 20px;
   background: var(--main-color);
   text-align: center;
-  color: #fff;
+  color: #000000;
 }
 .copyright a{
-  color: #22cf91;
+  color: #000000;
 }
 /* Making Responsive */
 @media (max-width: 991px) {
