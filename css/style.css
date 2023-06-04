@@ -302,9 +302,10 @@ span {
  background-color: #02225a;
 }
 
-.calendar{
-  width: 80%;
+.react-activity-calendar{
+  width: 70%;
   color: white;
+  margin: auto;
 }
 
 #github1{
