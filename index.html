@@ -28,7 +28,7 @@
             <li><a href="#skills" class="nav-link skills">Skills</a></li>
             <li><a href="#projects" class="nav-link projects">Projects</a></li>
             <li><a href="#contact" class="nav-link contact">Contact</a></li>
-            <li><a class="nav-link resume" id="resume-button-1" href="./Dharamveer-Resume.pdf" download>Resume <span id="resume1"><i class="bx bx-download"></i></span></a></li>
+            <li><a class="nav-link resume" id="resume-button-1" href="./Dharamveer-Resume.pdf" onclick="openResume()" download>Resume <span id="resume1"><i class="bx bx-download"></i></span></a></li>
             <div class="bx bx-moon" id="lightmode"></div>
         </ul>
     </navbar>
@@ -89,10 +89,11 @@
                         <a id="contact-phone"><span>9457340386</span></a>
                     </div>
                 </div>
-                <a class="btn" class= "nav-link resume"  id="resume-button-2" href="./Dharamveer-Resume.pdf" download>Download CV</a>
+                <a class="btn" class= "nav-link resume" onclick="openResume()"  id="resume-button-2" href="./Dharamveer-Resume.pdf" download>Download CV</a>
             </div>
         </div>
     </section>
+    
     <!-- Skills -->
     <section class="skills-section" id="skills">
         <div class="heading">
@@ -267,34 +268,6 @@
           
           
     </section>
-    <!------------------------------------------- Portfolio --------------------------------------->
-    <!-- <section class="portfolio" id="portfolio">
-        <div class="heading">
-            <h2>Portfolio</h2>
-            <span>Our Recent Work</span>
-        </div>
-        <div class="portfolio-content">
-            <div class="portfolio-img">
-                <img src="blog-2.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-3.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-4.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-5.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-6.jpg" alt="">
-            </div>
-            <div class="portfolio-img">
-                <img src="blog-7.jpg" alt="">
-            </div>
-            
-        </div>
-    </section> -->
 
     <!-- Contact -->
     <section class="contact-section" id="contact">
@@ -311,6 +284,7 @@
             </form>
         </div>
     </section>
+
     <!-- Footer -->
     <!-- <div class="footer">
         <h2>Coding Home</h2>
@@ -322,6 +296,7 @@
         </div>
  
     </div> -->
+
     <!-- Copyright -->
     <div class="copyright">
         <p>Created By <a href="">Dharamveer</a> | All Right Reserved 2023.</p>
@@ -345,6 +320,10 @@
          return fetch(`https://your-proxy.com/github?user=${username}`)
        }
     }).then(r => r.text())
+
+    function openResume(){
+        window.open("Dharamveer-Resume.pdf", "_blank")
+    }
 </script>
 </body>
 </html>
