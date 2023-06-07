@@ -3,7 +3,7 @@
     let menu = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
 
-    let x = 123
+    let x = 12
      
      
     window.addEventListener('scroll', () => {
