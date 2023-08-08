@@ -155,8 +155,39 @@ nav.shadow {
   color: blue;
   border: 1px solid rgb(150, 150, 150);
 }
- 
 
+
+/* --------------------Animated Text------------- */
+.animated-text {
+  font-size: 24px;
+  border-right: 2px solid transparent;
+  animation: typing 3s steps(20), blink-caret 2.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
+/* ----------------Hamburger Menu--------------- */
+
+
+ 
+/* ---------------------------------------------------------- */
 .about-container {
   display: grid;
   /* grid-template-columns: repeat(2, 1fr);
@@ -182,7 +213,6 @@ nav.shadow {
 }
 .information {
   margin: 1rem 0 1.4rem;
-  
 }
 .information .info-box {
   display: flex;
@@ -190,9 +220,11 @@ nav.shadow {
   margin-bottom: 1.4rem;
   margin-left: 35%;
 }
+
 .information .info-box .bx {
   font-size: 22px;
 }
+
 .information .info-box span {
   font-weight: 400;
   margin-left: 1rem;
@@ -222,7 +254,7 @@ nav.shadow {
 }
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 2rem;
   margin-top: 4rem;
@@ -430,16 +462,16 @@ form textarea {
 .footer {
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: 15px;
   background: #ebebeb;
   color: #000;
 }
 .footer h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
 }
 .footer-social a i{
-  color: rgb(10, 26, 208);
+  color: rgb(0, 0, 0);
   font-size: 25px;
   margin-left: 10px;
   text-align: center;
@@ -454,6 +486,7 @@ form textarea {
   background: var(--main-color);
   text-align: center;
   color: #000000;
+  font-weight: bold;
 }
 .copyright a{
   color: #000000;
@@ -654,7 +687,8 @@ padding: 5px;
 }
 
 .project-tech-stack img{
-  width: 40px;
+  width: 30px;
+  margin: auto;
 }
 
 .project-tech-stack>img:nth-child(1), .project-tech-stack img:nth-child(2){
