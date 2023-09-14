@@ -19,9 +19,11 @@
     <!-- Navbar -->
     <navbar id="nav-menu">
         <a href="#" class="logo">WELCOME</a>
- 
-        <div class="bx bx-menu" id="menu-icon"></div>
- 
+        <div class="menu-toggle" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <ul class="navbar">
             <li><a href="#home" class="nav-link home">Home</a></li>
             <li><a href="#about" class="nav-link about">About</a></li>
@@ -29,7 +31,7 @@
             <li><a href="#projects" class="nav-link projects">Projects</a></li>
             <li><a href="#contact" class="nav-link contact">Contact</a></li>
             <li><a class="nav-link resume" id="resume-button-1" href="./Dharamveer-Resume.pdf" onclick="openResume()" download>Resume <span id="resume1"><i class="bx bx-download"></i></span></a></li>
-            <div class="bx bx-moon" id="lightmode"></div>
+            <!-- <div class="bx bx-moon" id="lightmode"></div> -->
         </ul>
     </navbar>
     <!-- Home -->
@@ -50,7 +52,7 @@
  
     </section>
     <!-- About -->
-    <section class="about section" id="about">
+    <section class="reveal" class="about section" id="about">
         <div class="heading">
             <h2>About Me</h2><br>
             <!-- <span>Introduction</span> -->
@@ -64,8 +66,8 @@
                 <p id="user-detail-intro">Passionate Full Stack Web Developer with strong
                     designs and problem-solving skills. A highly disciplined
                     and motivated person. Proficient in both front-end and
-                    back-end technologies like HTML, CSS, JavaScript,
-                    Node, Express.js, and MongoDB. Looking forward to
+                    back-end technologies like HTML, CSS, JavaScript, React,
+                    NodeJS, Express.js, and also worked on SQL and NoSQL databases. Looking forward to
                     launching a career as a Full Stack Web Developer.</p>
                 <div class="information">
                     <!-- Box 1 -->
@@ -94,8 +96,9 @@
         </div>
     </section>
     
-    <!-- Skills -->
-    <section class="skills-section" id="skills">
+
+    <!---------------------------- Skills ------------------------------------>
+    <section class="reveal" class="skills-section" id="skills">
         <div class="heading">
             <h2>Skills</h2>
         </div>
@@ -158,26 +161,27 @@
     </section>
 
     <!-- GITHUB STATS -->
-    <section>
+    <section class="reveal" id="github-statistics">
         <div class="heading">
             <h2>Github Stats</h2>
-        </div><br><br>
-       <div id="github1">
-        <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=Dharamveer9457" alt="">
         </div><br>
-        <div id="github2">
-        <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dharamveer9457" alt="">
-        <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=Dharamveer9457" alt="">
-       </div><br>
-        <div class="react-activity-calendar">
+         <div class="react-activity-calendar" id="calendar">
             <!-- Loading stuff -->
             <!-- Loading the data just for you. -->
-        </div>
+            <img src="https://ghchart.rshah.org/Dharamveer9457" alt="Dharamveer's Github Calender">
+        </div><br>
+       <div id="github1">
+            <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=Dharamveer9457" alt="">
+        </div><br>
+        <div id="github2">
+            <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dharamveer9457" alt="">
+            <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=Dharamveer9457" alt="">
+       </div><br>
     </section>
 
 
     <!-- Services -->
-    <section class="services" id="projects">
+    <section class="reveal" class="services" id="projects">
         <div class="heading">
             <h2>Projects</h2>
         </div><br>
@@ -185,7 +189,8 @@
             <div class="project-card">
               <div class="project-details">
                 <h2 class="project-title">Shopclues Clone</h2>
-                <img src="./images/Project1.png" alt="Project 1">
+                <img src="./images/Project1.png" alt="Shopclues">
+                <p class="project-type">Individual Project</p>
                 <div class="project-tech-stack">
                     <img src="./images/html5.png" alt="HTML">
                     <img src="./images/css3.png" alt="CSS">
@@ -197,28 +202,77 @@
                 <p class="project-description">This is an e-commerce website which primarily delivers clothes
                     , home, electrical and sports essential to its customers. Also implemented admin dashboard for doing all the CRUD operation and also admin can keep track of users who registered. This was an individual project.</p>
                 <div class="links">
-                  <a class="project-github-link" href="https://github.com/Dharamveer9457/literate-needle-3714" target="_blank">
+                  <a class="project-github-link" href="https://github.com/Dharamveer9457/Shopclues-Clone" target="_blank">
                     <i class="bx bxl-github"></i> GitHub</a>
                   <a class="project-deployed-link" href="https://literate-needle-3714.netlify.app/" target="_blank">
                     <i class='bx bx-link-external'></i> Deployed</a>
                 </div>
               </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-details">
+                  <h2 class="project-title">Codemate</h2>
+                  <img src="./images/Project2.png" alt="Codemate">
+                  <p class="project-type" class="project-type">Collaborative Project</p>
+                  <div class="project-tech-stack">
+                      <img src="./images/html5.png" alt="HTML">
+                      <img src="./images/css3.png" alt="CSS">
+                      <img src="./images/javascript.png" alt="JS">
+                      <img src="./images/node-js.png" alt="Node">
+                      <img src="./images/express.png" alt="Express">
+                      <img src="./images/mongodb.png" alt="Mongo">
+                      <img src="./images/redis.png" alt="Redis">
+                  </div>
+                  <p class="project-description">This application allows students to effortlessly book tutors for their study sessions. With CodeMate, students can easily book tutors according to their need and tutors can easily manage their appointments and also can reschedule their meet according to their time.</p>
+                  <div class="links">
+                    <a class="project-github-link" href="https://github.com/Dharamveer9457/Codemate-Tutor-Booking-App" target="_blank">
+                      <i class="bx bxl-github"></i> GitHub</a>
+                    <a class="project-deployed-link" href="https://tutor-track.vercel.app/" target="_blank">
+                      <i class='bx bx-link-external'></i> Deployed</a>
+                  </div>
+                </div>
+            </div>
           
+            <div class="project-card">
+                <div class="project-details">
+                  <h2 class="project-title">VLink</h2>
+                  <img src="./images/Project3.png" alt="VLink">
+                  <p class="project-type">Collaborative Project</p>
+                  <div class="project-tech-stack">
+                    <img src="./images/html5.png" alt="HTML">
+                    <img src="./images/css3.png" alt="CSS">
+                    <img src="./images/javascript.png" alt="JS">
+                    <img src="./images/node-js.png" alt="Node">
+                    <img src="./images/express.png" alt="Express">
+                    <img src="./images/mongodb.png" alt="Mongo">
+                    <img src="./images/redis.png" alt="Redis">
+                </div>
+                  <p class="project-description">VLink is a communications platform that allows users to connect with video, audio, and chat. Vlink is a type of application that enables users to chat and video calls with an individuals and also users can create room and connect with a group of people in real time.</p>
+                  <div class="links">
+                    <a class="project-github-link" href="https://github.com/Dharamveer9457/VLink-VideoChattingApp" target="_blank">
+                      <i class="bx bxl-github"></i>GitHub</a>
+                    <a class="project-deployed-link" href="https://vlink-app.vercel.app/" target="_blank">
+                      <i class='bx bx-link-external'></i>Deployed</a>
+                  </div>
+                </div>
+            </div>
+
             <div class="project-card">
               <div class="project-details">
                 <h2 class="project-title">IndiaMart Clone</h2>
-                <img src="./images/Project2.png" alt="Project 2">
+                <img src="./images/Project4.png" alt="Project 2">
+                <p class="project-type">Collaborative Project</p>
                 <div class="project-tech-stack">
                     <img src="./images/html5.png" alt="HTML">
                     <img src="./images/css3.png" alt="CSS">
                     <img src="./images/javascript.png" alt="JS">
                 </div>
-                <p class="project-description">We have to create this website with the help of HTML, CSS and Javascript. My work was here to create home page of the website. In which I have made navbar, dropdown menu, footer section and many more things. This was the collaborative project made by a team of 5. </p>
+                <p class="project-description">Megamart is an e-commerce web service IndiaMart's clone where users can buy, explore products related to home decor, electrical, clothing etc. and purchase them. Also implemented admin dashboard to keep track of all users and products on website.</p>
                 <div class="links">
-                  <a class="project-github-link" href="https://github.com/Dharamveer9457/makeshift-protest-7826" target="_blank">
+                  <a class="project-github-link" href="https://github.com/Dharamveer9457/IndiaMart-Clone" target="_blank">
                     <i class="bx bxl-github"></i> GitHub</a>
-                  <a class="project-deployed-link" href="https://makeshift-protest-7826.netlify.app/index.html" target="_blank">
+                  <a class="project-deployed-link" href="https://makeshift-protest-7826.netlify.app/" target="_blank">
                     <i class='bx bx-link-external'></i> Deployed</a>
                 </div>
               </div>
@@ -227,13 +281,14 @@
             <div class="project-card">
               <div class="project-details">
                 <h2 class="project-title">American Eagle Clone</h2>
-                <img src="./images/Project3.png" alt="Project 3">
+                <img src="./images/Project5.png" alt="American Eagle">
+                <p class="project-type">Individual Project</p>
                 <div class="project-tech-stack">
                     <img src="./images/html5.png" alt="HTML">
                     <img src="./images/css3.png" alt="CSS">
                     <img src="./images/javascript.png" alt="JS">
                 </div>
-                <p class="project-description">This is was once again an E-Commerce website with the help of which user can buy clothes and accessories for both and men. In this individual project, there is various functionalities like filtering, sorting, and all. this was an individual project made in a span of 5 days</p>
+                <p class="project-description">This is an E-Commerce website where user can buy clothes and accessories for both and men. There are various filters are also there including user can browse by brand, by price also. Ease access to all the products and smooth UI to explore all the features and checkout.</p>
                 <div class="links">
                   <a class="project-github-link" href="https://github.com/Dharamveer9457/standing-gun-8725" target="_blank">
                     <i class="bx bxl-github"></i>GitHub</a>
@@ -242,36 +297,18 @@
                 </div>
               </div>
             </div>
-
-            <div class="project-card">
-                <div class="project-details">
-                  <h2 class="project-title">American Eagle Clone</h2>
-                  <img src="./images/Project3.png" alt="Project 3">
-                  <div class="project-tech-stack">
-                    <img src="./images/html5.png" alt="HTML">
-                    <img src="./images/css3.png" alt="CSS">
-                    <img src="./images/javascript.png" alt="JS">
-                </div>
-                  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
-                  <div class="links">
-                    <a class="project-github-link" href="https://github.com/Dharamveer9457/standing-gun-8725" target="_blank">
-                      <i class="bx bxl-github"></i>GitHub</a>
-                    <a class="project-deployed-link" href="https://standing-gun-8725.netlify.app/" target="_blank">
-                      <i class='bx bx-link-external'></i>Deployed</a>
-                  </div>
-                </div>
-              </div>
               
               <div class="project-card">
                 <div class="project-details">
                   <h2 class="project-title">American Eagle Clone</h2>
-                  <img src="./images/Project3.png" alt="Project 3">
+                  <img src="./images/Project5.png" alt="American Eagle">
+                  <p class="project-type">Individual Project</p>
                   <div class="project-tech-stack">
                     <img src="./images/html5.png" alt="HTML">
                     <img src="./images/css3.png" alt="CSS">
                     <img src="./images/javascript.png" alt="JS">
                 </div>
-                  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+                  <p class="project-description">This is an E-Commerce website where user can buy clothes and accessories for both and men. There are various filters are also there including user can browse by brand, by price also. Ease access to all the products and smooth UI to explore all the features and checkout.</p>
                   <div class="links">
                     <a class="project-github-link" href="https://github.com/Dharamveer9457/standing-gun-8725" target="_blank">
                       <i class="bx bxl-github"></i>GitHub</a>
@@ -285,8 +322,9 @@
           
     </section>
 
+
     <!-- Contact -->
-    <section class="contact-section" id="contact">
+    <section class="reveal" class="contact-section" id="contact">
         <div class="heading">
             <h2>Contact</h2>
             <!-- <span>Connect With Me</span> -->
@@ -324,18 +362,18 @@
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
 <script>
-    GitHubCalendar(".react-activity-calendar", "Dharamveer9457");
+    // GitHubCalendar(".react-activity-calendar", "Dharamveer9457");
 
-    // or enable responsive functionality:
-    GitHubCalendar(".react-activity-calendar", "Dharamveer9457", { responsive: true });
+    // // or enable responsive functionality:
+    // GitHubCalendar(".react-activity-calendar", "Dharamveer9457", { responsive: true });
 
-    // Use a proxy
-    GitHubCalendar(".react-activity-calendar", "Dharamveer9457", {
-       proxy (username) {
-         return fetch(`https://your-proxy.com/github?user=${username}`)
-       }
-    }).then(r =>
-    console.log(r.text()))
+    // // Use a proxy
+    // GitHubCalendar(".react-activity-calendar", "Dharamveer9457", {
+    //    proxy (username) {
+    //      return fetch(`https://your-proxy.com/github?user=${username}`)
+    //    }
+    // }).then(r =>
+    // console.log(r.text()))
 
     function openResume(){
         window.open("Dharamveer-Resume.pdf", "_blank")
@@ -345,8 +383,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
   
-<!-- Your custom script -->
-
-  <script src="custom-script.js"></script>
 </body>
 </html>

@@ -15,7 +15,6 @@
   --bg-color: #0f0c27;
   --text-color: #ffffff;
   --hover: hsl(260, 100%, 51%);
- 
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
@@ -63,35 +62,81 @@ body {
   box-shadow: -3px -3px 7px #ffffff73,
 				2px 2px 5px rgba(94, 104, 121, 0.288);
 }
+
 nav.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
+
 .logo {
   font-size: 1.61rem;
   font-weight: 600;
   color: var(--text-color);
 }
+
 .navbar {
   display: flex;
+  width: 60%;
+  justify-content: flex-end;
 }
 
 .navbar a {
   font-size: 1rem;
-  padding: 10px 20px;
   color: var(--text-color);
-  font-weight: 500;
-}
-.navbar a:hover {
-  color: var(--hover);
+  font-weight: bold;
 }
 
-#menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10001;
-  display: none;
-  border: 1px solid yellow;
+.navbar a:hover {
+  color: red;
 }
+
+.navbar li a {
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: blue; /* Change the color as needed */
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease; /* Adjust animation speed as needed */
+}
+
+.navbar li a:hover::before {
+  width: 100%;
+  transition: width 0.3s ease; /* Adjust animation speed as needed */
+}
+
+/*--------------Hamburger menu--------------*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: #ffffff;
+  transition: 0.4s;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+/*---------------------------------------------*/
 
 #lightmode {
   font-size: 22px;
@@ -182,10 +227,6 @@ nav.shadow {
     border-color: rgb(255, 255, 255);
   }
 }
-
-/* ----------------Hamburger Menu--------------- */
-
-
  
 /* ---------------------------------------------------------- */
 .about-container {
@@ -270,19 +311,50 @@ nav.shadow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 10px;
   margin-bottom: 1rem;
   margin: auto;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.skills-card{
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0); /* Initial shadow is hidden */
+  transition: box-shadow 0.3s, border 0.3s; /* Add transitions for smooth effects */
+  border: 2px solid transparent;
+}
+
+.skills-card:hover{
+  box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Add the shadow when hovering */
+  border: 2px solid #000;
 }
 
 .skills-card img{
   width: 150px;
+}
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 /* .skills-card h3,
 span {
   font-size: 1.1rem;
   font-weight: 500;
 } */
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .light-bar {
   position: absolute;
   bottom: 0;
@@ -335,9 +407,15 @@ span {
 }
 
 .react-activity-calendar{
-  width: 70%;
-  color: white;
+  width: 89%;
   margin: auto;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.react-activity-calendar>img{
+  width: 60%;
+
 }
 
 #github1{
@@ -491,6 +569,35 @@ form textarea {
 .copyright a{
   color: #000000;
 }
+
+.project-github-link, .project-deployed-link{
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+  font-weight: bold;
+ }
+
+ @keyframes fadeInOut {
+  0% {
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+ .project-type{
+  animation: fadeInOut 3s ease infinite; 
+  color: red;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+}
+
+
 /* Making Responsive */
 @media (max-width: 991px) {
   #nav-menu{
@@ -500,12 +607,14 @@ form textarea {
     padding: 50px 4%;
   }
 }
+
 @media (max-width: 881px) {
   :root {
     --big-font: 2.7rem;
     --medium-font: 1.4rem;
   }
 }
+
 @media (max-width: 768px) {
   :root {
     --big-font: 2.4rem;
@@ -529,15 +638,7 @@ form textarea {
     box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
     transition: 0.2s ease;
     text-align: center;
-  }
-  .navbar.active {
-    top: 100%;
-  }
-  .navbar a {
-    padding: 1.5rem;
-    display: block;
-    background: var(--bg-color);
-  }
+  }  
   #darkmode {
     position: absolute;
     top: 1.4rem;
@@ -563,9 +664,6 @@ form textarea {
     display: flex;
     justify-content: center;
   }
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
   .skills-img img {
     padding-left: 0;
   }
@@ -581,7 +679,8 @@ form textarea {
     margin-left: 25%;
   }
 }
-@media (max-width: 340px) {
+
+/* @media (max-width: 340px) {
   :root {
     --big-font: 1.7rem;
     --medium-font: 1.1rem;
@@ -605,8 +704,7 @@ form textarea {
   .contact-button{
     margin-left: 25%;
   }
-}
-
+} */
 
 
 /*------------------------------PROJECTS------------------------------ */
@@ -633,10 +731,6 @@ form textarea {
   width: 100%;
   height: auto;
 }
-
-/* .project-details {
-  /* padding: 10px; 
-} */
 
 .project-details h2 {
   font-size: 24px;
@@ -693,4 +787,154 @@ padding: 5px;
 
 .project-tech-stack>img:nth-child(1), .project-tech-stack img:nth-child(2){
   width: 35px;
+}
+
+
+/*------------For mobile screens-----------------*/
+@media screen and (max-width: 767px) {
+  #nav-menu{
+    width: 100%;
+    position: relative;
+  }
+  .menu-toggle {
+      display: flex;
+  }
+
+  .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #0f0c27;
+      box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .navbar.active {
+      display: flex;
+  }
+
+  .navbar li {
+      margin: 10px 0;
+   }
+
+   #github-statistics{
+    display: flex;
+    flex-direction: column;
+   }
+
+   #calendar>img{
+    width: 100%;
+   }
+
+   .skills-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+
+   #github-streak-stats{
+    /* width: 90%; */
+    height: 100px;
+   }
+
+   #github2{
+    display: flex;
+    flex-direction: column;
+   }
+
+   #github2>img{
+    width: 90%;
+   }
+
+   .portfolio{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+
+  .information{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information .info-box{
+    margin-left: 0;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .information .info-box span{
+    margin-left: 2px;
+  }
+}
+
+/* --------------------------For Tablets-------------------------- */
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #nav-menu{
+    width: 100%;
+    position: relative;
+  }
+  .menu-toggle {
+      display: flex;
+  }
+
+  .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #0f0c27;
+      box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .navbar.active {
+      display: flex;
+  }
+
+  .navbar li {
+      margin: 10px 0;
+   }
+
+   .skills-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+   #github-statistics{
+    display: flex;
+    flex-direction: column;
+   }
+
+   #calendar>img{
+    width: 100%;
+   }
+
+   #github-streak-stats{
+    /* width: 90%; */
+    height: 140px;
+   }
+
+   #github2{
+    display: flex;
+    flex-direction: column;
+   }
+
+   #github2>img{
+    width: 100%;
+   }
+
+   #github-stats-card{
+    margin-top: 20px;
+   }
+
+   .portfolio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   }
 }

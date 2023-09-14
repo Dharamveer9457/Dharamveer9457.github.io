@@ -1,44 +1,68 @@
- // Sticky Navbar
-    let header = document.querySelector('header');
-    let menu = document.querySelector('#menu-icon');
-    let navbar = document.querySelector('.navbar');
-     
-     
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('shadow', window.scrollY > 0);
-    });
-     
-    menu.onclick = () => {
-        navbar.classList.toggle('active');
-    }
-    window.onscroll = () => {
-        navbar.classList.remove('active');
-    }
 
-   let blackColor = document.querySelector(".blackcolorText");
+    // let header = document.querySelector('header');
+
+    // window.addEventListener('scroll', () => {
+    //     header.classList.toggle('shadow', window.scrollY > 0);
+    // });
+
+    let menu = document.getElementById('menu-icon');
+    let navbar = document.querySelector('.navbar');
+    
+    // window.onscroll = () => {
+    //     navbar.classList.remove('active');
+    // }
+
+    menu.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+    });
+
+    const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navbar.classList.remove("active");
+    });
+  });
    
 
-    // Light Mode
-    let lightmode = document.querySelector("#lightmode")
+  //  let blackColor = document.querySelector(".blackcolorText");
+   
+  //   //-----------------Light Mode------------------------
+  //   let lightmode = document.querySelector("#lightmode")
 
-    lightmode.onclick = ()=>{
-        if(lightmode.classList.contains("bx-sun")){
-            lightmode.classList.replace('bx-sun','bx-moon');
-             document.body.classList.remove('active');
-        }else{
-            lightmode.classList.replace('bx-moon','bx-sun');
-            document.body.classList.add('active');
-        }
-    }
+  //   lightmode.onclick = ()=>{
+  //       if(lightmode.classList.contains("bx-sun")){
+  //           lightmode.classList.replace('bx-sun','bx-moon');
+  //            document.body.classList.remove('active');
+  //       }else{
+  //           lightmode.classList.replace('bx-moon','bx-sun');
+  //           document.body.classList.add('active');
+  //       }
+  //   }
 
+//------------------Reveal On scrolling--------------------------
 
-    // ---------hamburger menu--------------
+function reveal() {
+	var reveals = document.querySelectorAll(".reveal");
 
+	for (var i = 0; i < reveals.length; i++) {
+		var windowHeight = window.innerHeight;
+		var elementTop = reveals[i].getBoundingClientRect().top;
+		var elementVisible = 150;
+
+		if (elementTop < windowHeight - elementVisible) {
+			reveals[i].classList.add("active");
+		} else {
+			reveals[i].classList.remove("active");
+		}
+	}
+}
+
+window.addEventListener("scroll", reveal);
 
 // ---------------Welcome text change----------------
 
 window.addEventListener("scroll", function() {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
 
   if (currentScrollPos === 0) {
       // At the top of the page, show "Welcome"
@@ -67,7 +91,7 @@ window.addEventListener("scroll", function() {
           if (charIndex < textLines[lineIndex].length) {
             animatedText.textContent += textLines[lineIndex].charAt(charIndex);
             charIndex++;
-            setTimeout(typeText, 50); // Adjust the typing speed here
+            setTimeout(typeText, 150); // Adjust the typing speed here
           } else {
             // Move to the next line after a short delay
             setTimeout(function() {
@@ -98,7 +122,6 @@ sendButton.addEventListener("click", ()=>{
             confirmButtonText: 'OK'
           });
         } else {
-
           Swal.fire({
             icon: 'success',
             title: 'Message Sent!',
@@ -107,11 +130,14 @@ sendButton.addEventListener("click", ()=>{
         })
     }
 })
+
+
+
     
-Cypress.on('uncaught:exception', (err, runnable) => {
-    // returning false here prevents Cypress from failing the test
-    return false
-  })
+// Cypress.on('uncaught:exception', (err, runnable) => {
+//     // returning false here prevents Cypress from failing the test
+//     return false
+//   })
 
 
 
