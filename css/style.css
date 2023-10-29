@@ -38,7 +38,7 @@ body {
   text-align: center;
 }
 .heading h2 {
-  font-size: 30px;
+  font-size: 35px;
   text-decoration: underline;
 }
  
@@ -330,7 +330,7 @@ nav.shadow {
 }
 
 .skills-card img{
-  width: 150px;
+  width: 120px;
 }
 
 .reveal {
