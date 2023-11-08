@@ -332,7 +332,46 @@ nav.shadow {
 .skills-card img{
   width: 120px;
 }
+/* ---------------------Tools Styles------------------------ */
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.tools-img img {
+  width: 80%;
+  padding-left: 4rem;
+  object-position: center;
+}
 
+.tools-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 1rem;
+  margin: auto;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.tools-card{
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0); /* Initial shadow is hidden */
+  transition: box-shadow 0.3s, border 0.3s; /* Add transitions for smooth effects */
+  border: 2px solid transparent;
+}
+
+.tools-card:hover{
+  box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Add the shadow when hovering */
+  border: 2px solid #000;
+}
+
+.tools-card img{
+  width: 120px;
+}
 .reveal {
   opacity: 0;
   transition: opacity 0.5s;
@@ -672,6 +711,14 @@ form textarea {
     display: flex;
     justify-content: center;
   }
+  .tools-img img {
+    padding-left: 0;
+  }
+  .tools-img {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
   .contact-form form{
     width: 300px;
   }
@@ -835,6 +882,11 @@ padding: 5px;
     grid-template-columns: repeat(1,1fr);
    }
 
+   .tools-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+
    #github-streak-stats{
     /* width: 90%; */
     height: 100px;
@@ -903,6 +955,10 @@ padding: 5px;
    }
 
    .skills-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .tools-container {
     grid-template-columns: repeat(2,1fr);
   }
 
