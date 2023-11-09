@@ -994,3 +994,10 @@ padding: 5px;
     grid-template-columns: repeat(2,1fr);
    }
 }
+
+@media (min-width: 1000px) and (max-width: 1400px){
+  .portfolio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   }
+}
