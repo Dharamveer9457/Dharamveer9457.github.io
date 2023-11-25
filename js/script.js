@@ -69,7 +69,7 @@ window.addEventListener("scroll", function() {
       document.querySelector(".logo").innerText = "Welcome";
   } else {
       // Scrolled down, show "Dharamveer"
-      document.querySelector(".logo").innerHTML = `<span style="color: red;">Dharam</span><span style="color: white;">veer</span>`;
+      document.querySelector(".logo").innerHTML = `<span style="color: red;">Dharam</span><span style="color: white;">veer/></span>`;
   }
 });
 
@@ -78,8 +78,8 @@ window.addEventListener("scroll", function() {
 // -----------------Animated and running text---------------------
 
     const textLines = [
-        "A Full Stack Web Developer",
-        "A NodeJS Developer"
+        "I'm a Full Stack Developer",
+        "I'm a NodeJS Developer"
       ];
       
       const animatedText = document.querySelector(".animated-text");
