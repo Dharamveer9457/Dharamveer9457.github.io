@@ -309,6 +309,7 @@ nav.shadow {
 .skills-card {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -316,6 +317,12 @@ nav.shadow {
   margin: auto;
   cursor: pointer;
   border: 2px solid white;
+  color:#0f0c27;
+}
+
+.skills-card-name{
+  margin-top: 5px;
+  
 }
 
 .skills-card{
@@ -327,6 +334,8 @@ nav.shadow {
 .skills-card:hover{
   box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Add the shadow when hovering */
   border: 2px solid #000;
+  color: white;
+  font-weight: bold;
 }
 
 .skills-card img{
@@ -349,6 +358,7 @@ nav.shadow {
 .tools-card {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -356,6 +366,7 @@ nav.shadow {
   margin: auto;
   cursor: pointer;
   border: 2px solid white;
+  color: #0f0c27;
 }
 
 .tools-card{
@@ -367,6 +378,12 @@ nav.shadow {
 .tools-card:hover{
   box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Add the shadow when hovering */
   border: 2px solid #000;
+  color: white;
+  font-weight: bold;
+}
+
+.tools-card-name{
+  margin-top: 5px;
 }
 
 .tools-card img{
